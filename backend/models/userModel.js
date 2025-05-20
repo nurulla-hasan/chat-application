@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const userModel = new mongoose.Schema({
-    fullname: {
+    fullName: {
         type: String,
         required: true
     },
@@ -18,7 +18,7 @@ const userModel = new mongoose.Schema({
         type: String,
         default: ""
     },
-    grnder: {
+    gender: {
         type: String,
         enum: ["male", "female"],
         required: true
@@ -26,4 +26,4 @@ const userModel = new mongoose.Schema({
 
 }, { timestamps: true })
 
-export const user = mongoose.modal("User", userModel)
+export const User = mongoose.model("User", userModel)
